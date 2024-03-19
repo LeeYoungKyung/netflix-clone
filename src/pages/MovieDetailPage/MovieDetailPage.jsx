@@ -1,7 +1,8 @@
 import React from 'react';
+import './MovieDetailPage.css';
 
 const MovieDetailPage = () => {
-  return <div>MovieDetailPage</div>;
+  return <div className='mdp'>MovieDetailPage</div>;
 };
 
 export default MovieDetailPage;

@@ -10,7 +10,7 @@ import './AppLayout.css';
 const Applayout = () => {
   return (
     <>
-      <Navbar expand='lg' className='bg-body-tertiary '>
+      <Navbar expand='lg' className='bg-body-tertiary p-0'>
         <Container fluid className='bg-black' style={{ height: '70px' }}>
           <Navbar.Brand
             href='/'

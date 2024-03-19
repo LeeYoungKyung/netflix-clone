@@ -4,8 +4,8 @@ import './App.css';
 // Importing components
 import AppLayout from './layout/AppLayout';
 import Homepage from './pages/Homepage/Homepage';
-import MoviePage from './pages/MovieDetail/MoviePage';
-import MovieDetailPage from './pages/Movies/MovieDetailPage';
+import MoviePage from './pages/Movie/MoviePage';
+import MovieDetailPage from './pages/MovieDetailPage/MovieDetailPage';
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
