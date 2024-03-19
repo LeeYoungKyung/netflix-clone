@@ -8,6 +8,7 @@ import MoviePage from './pages/MovieDetail/MoviePage';
 import MovieDetailPage from './pages/Movies/MovieDetailPage';
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 function App() {
   return (
     <Routes>
