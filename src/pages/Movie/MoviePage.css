@@ -1,4 +1,25 @@
 .mp {
   background-color: black;
-  height: 100vh;
+  min-height: 100vh; /* 최소한의 화면 높이를 유지하여 스크롤이 가능하도록 설정 */
+}
+
+.moviePage {
+  padding-top: 20px; /* 원하는 만큼의 padding 추가 */
+}
+
+.moviePage .row > .col-lg-8 > .row > .col {
+  background-color: black; /* 카드의 배경색을 검정으로 설정 */
+  margin-bottom: 20px; /* 카드 사이의 간격을 조절 */
+  border-radius: 10px; /* 카드의 테두리를 둥글게 설정 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); /* 그림자 추가 */
+}
+
+.page-item {
+  justify-content: center;
+}
+.pagination {
+  justify-content: center;
+}
+.row {
+  justify-content: center;
 }
