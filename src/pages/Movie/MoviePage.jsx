@@ -22,11 +22,16 @@ const MoviePage = () => {
 
   if (isLoading) {
     return (
-      <div className='spinner-area'>
+      <div className='spinner-area bg-black '>
         <Spinner
           animation='border'
           variant='danger'
-          style={{ width: '5rem', height: '5rem' }}
+          style={{
+            width: '5rem',
+            height: '5rem',
+            backgroundColor: 'black',
+            justifyItems: 'center',
+          }}
         />
       </div>
     );
