@@ -6,6 +6,7 @@ import { Alert, Row, Spinner, Col } from 'react-bootstrap';
 import { Container } from 'react-bootstrap';
 import MovieCard from '../Homepage/components/Banner/MovieCard/MovieCard';
 import ReactPaginate from 'react-paginate';
+import MoviePageSpinner from './MoviePageSpinner';
 
 const MoviePage = () => {
   const [query, setQuery] = useSearchParams();
@@ -23,7 +24,8 @@ const MoviePage = () => {
   if (isLoading) {
     return (
       <div className='spinner-area bg-black '>
-        <Spinner
+        <MoviePageSpinner />
+        {/* <Spinner
           animation='border'
           variant='danger'
           style={{
@@ -32,7 +34,7 @@ const MoviePage = () => {
             backgroundColor: 'black',
             justifyItems: 'center',
           }}
-        />
+        /> */}
       </div>
     );
   }

@@ -6,7 +6,7 @@ const api = axios.create({
   baseURL: 'https://api.themoviedb.org/3',
   headers: {
     Accept: 'application/json',
-    Authorization: `Bearer ${API_KEY}`,
+    Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzYTE4ZWVhNzAwNzdlZTY2ODcwNzYzYzUxOTg0NjhiYyIsInN1YiI6IjY1YTVlYjI4OTdhNGU2MDEyODRmNGQ0OSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.oWNC3cSuet8PUvaAST12h9tr-WTL58_fqTNyo1TRluU`,
   },
 });
 
