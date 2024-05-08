@@ -2,6 +2,9 @@ import React from 'react';
 import { Badge } from 'react-bootstrap';
 import './MovieCard.css';
 import { useMovieGenreQuery } from '../../../../../hooks/useMovieGenre';
+import { BsCaretDownFill } from 'react-icons/bs';
+import { BsCaretUpFill } from 'react-icons/bs';
+import { CiStar } from 'react-icons/ci';
 
 const MovieCard = ({ movie }) => {
   const { data: genreData } = useMovieGenreQuery();
@@ -25,16 +28,33 @@ const MovieCard = ({ movie }) => {
       className='movie-card'
     >
       {/*  */}
-      <div className='overlay'>
+      <div
+        className='overlay p-2 '
+        style={{ alignItems: 'center', placeContent: 'center' }}
+      >
         <h4 className='p-2'>{movie.title}</h4>
-        <div className='p-2'>{movie.vote_average}</div>
+        <div
+          className='p-2'
+          style={{
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center',
+          }}
+        >
+          <CiStar />
+          <span>{movie.vote_average}</span>
+        </div>
+
         <div className='p-2'>{movie.popularity}</div>
         {showGenre(movie.genre_ids).map((id, index) => (
           <Badge key={index} bg='danger' className='badge'>
             {id}
           </Badge>
         ))}
-        <div className='p-2'>{movie.adult ? 'over18' : 'under18'}</div>
+        <div className='p-2' style={{ display: 'flex', alignItems: 'center' }}>
+          <span>18</span>
+          {movie.adult ? <BsCaretUpFill /> : <BsCaretDownFill />}
+        </div>
       </div>
       {/*  */}
     </div>

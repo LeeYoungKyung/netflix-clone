@@ -6,6 +6,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Outlet, useNavigate } from 'react-router-dom';
 import './AppLayout.css';
+import logo from './logo.png';
 
 const Applayout = () => {
   const [keyword, setKeyword] = useState('');
@@ -24,7 +25,11 @@ const Applayout = () => {
             className='navbar-logo'
             style={{ color: 'white' }}
           >
-            logo
+            <img
+              src={logo}
+              alt='Logo'
+              style={{ maxHeight: '100%', maxWidth: '200px' }}
+            />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='navbarScroll' />
           <Navbar.Collapse id='navbarScroll'>
