@@ -1,13 +1,14 @@
 import React from 'react';
 import { Badge } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom'; // useHistory 대신 useNavigate 가져오기
 import './MovieCard.css';
 import { useMovieGenreQuery } from '../../../../../hooks/useMovieGenre';
-import { BsCaretDownFill } from 'react-icons/bs';
-import { BsCaretUpFill } from 'react-icons/bs';
+import { BsCaretDownFill, BsCaretUpFill } from 'react-icons/bs';
 import { CiStar } from 'react-icons/ci';
 
 const MovieCard = ({ movie }) => {
   const { data: genreData } = useMovieGenreQuery();
+  const navigate = useNavigate(); // useHistory 대신 useNavigate 사용
 
   const showGenre = (genreIdList) => {
     if (!genreData) return [];
@@ -17,6 +18,11 @@ const MovieCard = ({ movie }) => {
     });
     return genreNameList;
   };
+
+  const handleCardClick = () => {
+    navigate(`/movies/${movie.id}`);
+  };
+
   return (
     <div
       style={{
@@ -26,8 +32,8 @@ const MovieCard = ({ movie }) => {
           ')',
       }}
       className='movie-card'
+      onClick={handleCardClick} // 카드 클릭 시 handleCardClick 함수 호출
     >
-      {/*  */}
       <div
         className='overlay p-2 '
         style={{ alignItems: 'center', placeContent: 'center' }}
@@ -44,7 +50,6 @@ const MovieCard = ({ movie }) => {
           <CiStar />
           <span>{movie.vote_average}</span>
         </div>
-
         <div className='p-2'>{movie.popularity}</div>
         {showGenre(movie.genre_ids).map((id, index) => (
           <Badge key={index} bg='danger' className='badge'>
@@ -56,7 +61,6 @@ const MovieCard = ({ movie }) => {
           {movie.adult ? <BsCaretUpFill /> : <BsCaretDownFill />}
         </div>
       </div>
-      {/*  */}
     </div>
   );
 };

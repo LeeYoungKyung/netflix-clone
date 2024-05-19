@@ -1,4 +1,12 @@
-.mdp {
-  background-color: black;
-  height: 100vh;
+.movie-details-container {
+  display: flex;
+  align-items: center;
+}
+.main {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.movie-info {
+  align-items: center;
 }
