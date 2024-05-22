@@ -5,7 +5,7 @@
 }
 .banner:before {
   content: '';
-  background: linear-gradient(to top, black, transparent);
+  background: linear-gradient(to right, black, transparent);
   position: absolute;
   left: 0;
   height: 56vh;

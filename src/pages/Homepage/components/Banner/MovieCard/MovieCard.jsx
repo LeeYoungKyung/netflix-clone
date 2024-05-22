@@ -32,7 +32,7 @@ const MovieCard = ({ movie }) => {
           ')',
       }}
       className='movie-card'
-      onClick={handleCardClick} // 카드 클릭 시 handleCardClick 함수 호출
+      onClick={handleCardClick}
     >
       <div
         className='overlay p-2 '

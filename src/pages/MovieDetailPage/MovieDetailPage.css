@@ -4,9 +4,13 @@
 }
 .main {
   width: 90%;
+  height: 90%;
   margin: 0 auto;
 }
 
 .movie-info {
   align-items: center;
+}
+.overview {
+  font-size: x-large;
 }

@@ -15,7 +15,7 @@ const MovieDetailPage = () => {
       console.log('fffff', movie);
       try {
         const response = await fetch(
-          `https://api.themoviedb.org/3/movie/${id}?api_key=3a18eea70077ee66870763c5198468bc`
+          `https://api.themoviedb.org/3/movie/${id}?api_key=3a18eea70077ee66870763c5198468bc&language=ko-KR`
         );
         if (!response.ok) {
           throw new Error('영화 정보를 가져오는데 실패했습니다');
@@ -73,7 +73,7 @@ const MovieDetailPage = () => {
               className='info-header p-3 justify-center'
               style={{ justifyContent: 'center', width: '80%' }}
             >
-              <h1 className='text-2xl font-bold text-white mb-4'>
+              <h1 className=' text-xs font-black	 text-white mb-4'>
                 {movie.title}
               </h1>
 
@@ -91,12 +91,17 @@ const MovieDetailPage = () => {
                 <p className='text-white mb-0'>{movie.vote_average}</p>
               </div>
 
-              <p className='text-white mb-2'>
+              <p className='text-white mb-2 text-xl'>
                 {movie.genres.map((genre, index) => (
                   <Badge key={index}>{genre.name}</Badge>
                 ))}
               </p>
-              <p className='text-white bg-black overview'>{movie.overview}</p>
+              <p
+                className='overview text-white bg-black overview ;
+'
+              >
+                {movie.overview}
+              </p>
             </div>
           </div>
         </div>

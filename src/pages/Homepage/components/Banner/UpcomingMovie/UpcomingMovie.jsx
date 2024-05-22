@@ -31,7 +31,7 @@ const UpComingMovie = () => {
   }
   return (
     <div>
-      <h3 className='text-white bg-black mb-0'>UpComing Movies</h3>
+      <h3 className='text-white bg-black mb-0 p-3'>UpComing Movies</h3>
       <Carousel
         infinite={true}
         centerMode={true}

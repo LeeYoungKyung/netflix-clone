@@ -30,7 +30,7 @@ const TopRagedMovieSlider = () => {
   }
   return (
     <div>
-      <h3 className='text-white bg-black mb-0'>Top Raged Movies</h3>
+      <h3 className='text-white bg-black mb-0 p-3'>Top Raged Movies</h3>
       <Carousel
         infinite={true}
         centerMode={true}
