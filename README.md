@@ -1,4 +1,4 @@
-<h1>Netflix Clone Coding Project</h1>
+<h1>Clone Coding Project</h1>
 
 <h2>소개(Introduction) </h2>
 
